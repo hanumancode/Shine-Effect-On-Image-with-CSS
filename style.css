@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    overflow: hidden;
+    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);  
+}
+
+.box img {
+    width: 100%;
+    padding-top: 20px;
+}
+.box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    transform: skewX(0deg);
+    transition: 1.5s;
+}
+.box:hover:before {
+    left: 400px;
+}
